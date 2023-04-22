@@ -1,0 +1,37 @@
+{% extends 'bootstrap/base.html' %}
+
+{% block head %}
+{{super()}}
+    <title>{%  block title %} Restauracion de Fotos | {% endblock %}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <script type="text/javascript" src="js/bootstrap-filestyle.min.js"> </script>
+{% endblock %}
+
+
+
+{% block body %}
+    {% block navbar %}
+        {% include 'navbar.html' %}
+    {% endblock %}
+
+
+    {% block header %}
+        <div class="container">
+            <div class="jumbotron text-center">
+                <h1>Restauración de Fotos</h1>
+                <p>Tienes fotos viejas o borrosas?. Permita que nuestra IA - Inteligencia Artificial las restaure para que perduren los recuerdos. 100% Gratis</p>
+            </div>
+        
+        </div>
+    {% endblock %}    
+
+    {% block photo_restore %}
+    {% endblock %}
+
+    {% block photo_input %}
+    {% endblock %}
+
+    {% block mhumerez%}
+    {% endblock %}
+
+{% endblock %}

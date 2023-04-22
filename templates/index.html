@@ -1,0 +1,93 @@
+{% extends 'base.html' %}
+{% import 'bootstrap/wtf.html' as wtf %}
+
+{% block title %}
+
+    {{ super() }}
+    Welcome to information_html
+{% endblock %}
+
+{% block photo_restore %}
+
+    <h2 class="mb-5"></h2>
+
+    <div class="container text-center">
+        <div class="row row-gap-3">
+            <div class="col-6 col-md-6">
+            
+            {% if filename %}
+                    <div style="display: inline-block">
+                        <p>Imagen Original:</p>
+                        <img src="{{ url_for('static', filename='images/' + filename) }}" style="width:400px" class="rounded">
+                
+                    </div>
+
+            {% endif %}
+            </div>
+            
+            <div class="col-6 col-md-6">
+            {% if restored_img_url %}
+                    <div style="display: inline-block">
+                        <p>Imagen Restaurada:</p>
+                        <a href="{{ restored_img_url }}" target="_blank"><img src="{{ restored_img_url }}" style="width:400px" class="rounded">
+
+                        </a>
+                    </div>
+            {% endif %}
+            </div>
+        </div>
+    </div>
+            
+
+
+{% endblock %}
+
+
+
+    
+    
+
+{% block photo_input %}
+    <div class="container text-center">
+        <form method="post" action="/" enctype="multipart/form-data" class="row center">   
+        
+        <div class="row">                     
+            <div class = 'col-12'>
+                
+                <span class="btn btn-default p-2 border bg-light" style="margin-top: 30px;">
+                    Selecciona Foto <p>_____________ </p><input type="file" name="file" autocomplete="off" required>
+                </span>
+            </div>
+        </div>
+        
+
+        <div class="row">
+            <div class = 'col-12'>
+
+                <input type="submit" class="btn btn-primary" value="Enviar foto para Restauración" style="margin-top: 20px;">
+
+            </div>
+        </div>
+
+        </form>
+
+    </div>
+{% endblock %} 
+
+{% block mhumerez %}
+<div class="container">
+    <div class="row">
+        <p style="padding:50px 10px 20px 10px;
+        text-align: center;">
+            Copyright: Analytical-Point
+            Email: admin@analyticalpoint.com
+            
+        </p>
+    </div>
+</div>
+{% endblock %}
+
+        
+
+
+

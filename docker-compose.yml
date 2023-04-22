@@ -1,0 +1,9 @@
+services:
+  restorephotos: 
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - .:/app
+    ports:
+      - '6712:6712'
