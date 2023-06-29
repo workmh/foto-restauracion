@@ -17,7 +17,7 @@
             
             {% if filename %}
                     <div style="display: inline-block">
-                        <p>Original Image:</p>
+                        <p>Imagen Original:</p>
                         <img src="{{ url_for('static', filename='images/' + filename) }}" style="width:400px" class="rounded">
                 
                     </div>
@@ -28,7 +28,7 @@
             <div class="col-6 col-md-6">
             {% if restored_img_url %}
                     <div style="display: inline-block">
-                        <p>Restored Image:</p>
+                        <p>Imagen Restaurada:</p>
                         <a href="{{ restored_img_url }}" target="_blank"><img src="{{ restored_img_url }}" style="width:400px" class="rounded">
 
                         </a>
@@ -55,7 +55,7 @@
             <div class = 'col-12'>
                 
                 <span class="btn btn-default p-2 border bg-light" style="margin-top: 30px;">
-                    Choose Photo <p>_____________ </p><input type="file" name="file" autocomplete="off" required>
+                    Selecciona Foto <p>_____________ </p><input type="file" name="file" autocomplete="off" required>
                 </span>
             </div>
         </div>
@@ -64,7 +64,7 @@
         <div class="row">
             <div class = 'col-12'>
 
-                <input type="submit" class="btn btn-primary" value="Send Photo to Restoration" style="margin-top: 20px;">
+                <input type="submit" class="btn btn-primary" value="Enviar foto para Restauración" style="margin-top: 20px;">
 
             </div>
         </div>
@@ -79,8 +79,8 @@
     <div class="row">
         <p style="padding:50px 10px 20px 10px;
         text-align: center;">
-            Copyright: Analytical Point
-            Email: marcelo.humerez@analyticalpoint.com
+            Copyright: Analytical-Point
+            Email: admin@analyticalpoint.com
             
         </p>
     </div>
